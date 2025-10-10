@@ -1,26 +1,62 @@
-body {
+body, html {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 2rem;
-    background-image: url("https://i.pinimg.com/736x/d7/42/e8/d742e83fefc3a3b77888f1df7a5c9b18.jpg");
-  }
-  
-  header {
-    margin-bottom: 2rem;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+    margin: 0;
+    padding: 0;
+}
 
-  
+.background {
+    display: flex;
+    flex-direction: column;       
+    align-items: center;          
+    justify-content: flex-start;  
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center, #3a3a3a 0%, #0b0b0b 100%);
+}
+
+.logo {
+  display: block;
+  margin: 150px auto 24px auto;
+  width: 220px;
+  height: auto;
+  opacity: 0.52;
+  position: relative;
+  z-index: 2;
+}
+
+.background::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.40;
+    background-image: url(./images/concrete-wall-2.png);
+}
+
+h1, p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #F7F7F7;
+}
+p {
+    font-size: 1.5em;
+    color: #F7F7F7;
+}
+
+#theDiv {
+  width: 600px;
+  border: solid #F7F7F7 6px;
+  border-radius: 12px;
+  border-style: double;
+}

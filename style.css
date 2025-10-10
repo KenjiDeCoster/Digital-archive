@@ -3,15 +3,16 @@ body, html {
     text-align: center;
     margin: 0;
     padding: 0;
+    background: radial-gradient(ellipse at center, #3a3a3a 0%, #0b0b0b 100%);
 }
 
 .background {
     display: flex;
-    flex-direction: column;       
-    align-items: center;          
-    justify-content: flex-start;  
-    min-height: 100vh;
-    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 60px;
+    padding-bottom: 80px;
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -20,7 +21,7 @@ body, html {
 
 .logo {
   display: block;
-  margin: 150px auto 24px auto;
+  margin: 50px auto auto auto;
   width: 220px;
   height: auto;
   opacity: 0.52;
@@ -40,6 +41,13 @@ body, html {
     background-image: url(./images/concrete-wall-2.png);
 }
 
+#theDiv {
+  width: 600px;
+  border: solid #F7F7F7 6px;
+  border-radius: 12px;
+  border-style: double;
+}
+
 h1, p {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -54,9 +62,80 @@ p {
     color: #F7F7F7;
 }
 
-#theDiv {
-  width: 600px;
-  border: solid #F7F7F7 6px;
-  border-radius: 12px;
-  border-style: double;
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #F7F7F7;
+  z-index: 2;
+  position: relative;
+  background: transparent;
+  margin-top: -40px;
+}
+
+section {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #F7F7F7;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "• ";
+  color: #F7F7F7;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  padding-bottom: 20px;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #F7F7F7;
+  color: #F7F7F7;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cv-button:hover {
+  background: #F7F7F7;
+  color: #0b0b0b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  #theDiv {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 160px;
+    margin: 100px auto 20px auto;
+  }
+
+  main {
+    padding: 20px;
+  }
 }

@@ -127,6 +127,9 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 700px) {
+  header {
+    width: 80%;
+  }
   #theDiv {
     width: 90%;
   }
@@ -148,3 +151,4 @@ footer {
     padding: 20px;
   }
 }
+

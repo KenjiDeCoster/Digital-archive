@@ -125,30 +125,5 @@ footer {
   border-radius: 5px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 700px) {
-  header {
-    width: 80%;
-  }
-  #theDiv {
-    width: 90%;
-  }
 
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  p, li {
-    font-size: 1rem;
-  }
-
-  .logo {
-    width: 160px;
-    margin: 100px auto 20px auto;
-  }
-
-  main {
-    padding: 20px;
-  }
-}
 

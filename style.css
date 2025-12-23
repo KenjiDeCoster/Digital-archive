@@ -18,14 +18,6 @@ body, html {
   overflow: hidden;
 }
 
-.logo {
-  display: block;
-  margin-top: 200px;
-  margin-bottom: 200px;
-  position: fixed;
-  z-index: 2;
-}
-
 .background::before {
   content: "";
   position: fixed;

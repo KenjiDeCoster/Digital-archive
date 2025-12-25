@@ -1,122 +1,264 @@
-body, html {
-  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-  text-align: center;
+/* BASIS */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: radial-gradient(ellipse at center, #3a3a3a 0%, #0b0b0b 100%);
 }
 
-.background {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 60px;
-  padding-bottom: 80px;
-  width: 100vw;
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(ellipse at center, #3a3a3a 0%, #0b0b0b 100%);
+  color: #f7f7f7;
+}
+
+/* HERO / HEADER */
+.hero {
+  padding: 40px 16px 24px;
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.background::before {
+.hero::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  opacity: 0.40;
-  background-image: url(./images/concrete-wall-2.png);
+  inset: 0;
+  background-image: url("./images/concrete-wall-2.png");
+  opacity: 0.5;
+  z-index: -1;
 }
 
-#theDiv {
-  width: 600px;
-  border: solid #F7F7F7 6px;
-  border-radius: 24px;
-  border-style: double;
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  border: 4px double #f7f7f7;
+  border-radius: 20px;
+  padding: 24px 20px;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-h1, p {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-h1 {
+.hero h1 {
   font-size: 2.2rem;
-  font-weight: bold;
-  color: #F7F7F7;
-}
-p {
-  font-size: 1.5em;
-  color: #F7F7F7;
-  font: italic 1.2rem "Fira Sans";
+  margin-bottom: 12px;
 }
 
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 200px 20px;
-  color: #F7F7F7;
-  z-index: 3;
-  position: relative;
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: 140px;
+.hero p {
+  font-size: 1.1rem;
 }
 
-section {
-  margin-bottom: 60px;
-  text-align: left;
-  z-index: 3;
+/* PAGINA-CONTAINER */
+.page {
+  max-width: 960px;
+  margin: 32px auto 40px;
+  padding: 32px 20px;
+  background: rgba(0, 0, 0, 0.60);
+  border-radius: 16px;
 }
 
+/* KOPPEN */
 h2 {
-  font-size: 1.8rem;
-  border-bottom: 2px solid #F7F7F7;
-  padding-bottom: 8px;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #f7f7f7;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+/* TOP GRID (OVER MIJ + CONTACT) */
+.top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.column p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* CONTACT-ZIJBALK */
+.sidebar {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.contact-list {
+  list-style: none;
   margin-bottom: 16px;
 }
 
+.contact-list li {
+  margin-bottom: 8px;
+}
+
+.contact-list span {
+  display: inline-block;
+  min-width: 80px;
+  font-weight: 600;
+}
+
+.contact-list a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 2px solid #f7f7f7;
+  color: #0b0b0b;
+  background: #f7f7f7;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.25s, color 0.25s, transform 0.1s;
+  margin-right: 8px;   /* nieuw */
+  margin-top: 0.4rem; 
+  margin-bottom: 0.4rem; 
+}
+
+
+.btn:hover {
+  background: transparent;
+  color: #f7f7f7;
+  transform: translateY(-1px);
+}
+
+/* ALGEMENE SECTIES */
+section {
+  margin-bottom: 40px;
+}
+
+section p {
+  line-height: 1.6;
+}
+
+/* LIJSTEN */
 ul {
-  list-style-type: none;
+  list-style: none;
   padding-left: 0;
 }
 
 ul li::before {
   content: "• ";
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 
-footer {
+.job ul li {
+  margin-left: 0;
+  margin-bottom: 6px;
+}
+
+/* TAG-achtige skills */
+.tags li {
+  margin-bottom: 6px;
+}
+
+/* THESIS-INDENT */
+.thesis {
+  margin-top: 6px;
+  margin-left: 16px;
+  font-size: 0.95rem;
+}
+
+/* FOOTER */
+.footer {
   text-align: center;
   color: #aaa;
-  padding-bottom: 20px;
+  padding: 16px 0 24px;
+  font-size: 0.9rem;
 }
 
-.cv-button {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #F7F7F7;
-  color: #F7F7F7;
+/* ALGEMENE TEKSTAFSTANDEN */
+p, li {
+  line-height: 1.6;        /* meer ruimte tussen regels */
+  margin-bottom: 0.4rem;   /* kleine ruimte tussen paragrafen/lijstitems */
+}
+
+/* ERVARINGEN */
+#experience {
+  margin-bottom: 40px;
+}
+
+.experience-item {
+  margin-bottom: 24px;          /* ruimte tussen verschillende ervaringen */
+  padding-left: 18px;           /* ruimte voor de verticale lijn */
+  border-left: 3px solid #f7f7f7;  /* duidt het begin van een nieuwe ervaring aan */
+}
+
+.experience-header h3 {
+  margin-bottom: 4px;
+}
+
+.experience-role {
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+
+.experience-body {
+  margin-left: 4px;             /* lichte extra indent t.o.v. header */
+}
+
+.cv-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;            /* verborgen standaard */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cv-modal-content {
+  width: min(900px, 90vw);
+  height: min(600px, 80vh);
+  background: #111;
   border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s;
+  overflow: hidden;
+  position: relative;
 }
 
-.cv-button:hover {
-  background: #F7F7F7;
-  color: #0b0b0b;
+.cv-modal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-.button {
-  display: inline-block;
-  padding: 10px 10px;
-  background-color: #F7F7F7;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
+.cv-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  color: #f7f7f7;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.thesis {
-  margin-left: 20px;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .top-grid {
+    grid-template-columns: 1fr;
+  }
 
+  .hero-inner {
+    margin-inline: 8px;
+  }
+
+  .page {
+    margin-inline: 12px;
+    padding-inline: 16px;
+  }
+}
